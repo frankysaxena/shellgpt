@@ -24,14 +24,6 @@ const prompts = [
     keywords: ['new customers', 'car wash', 'loyalty program', 'grand opening', 'station services']
   },
   {
-    id: 'community-events',
-    icon: '🏪',
-    title: 'Community Engagement',
-    description: 'Connect with your local community through event promotions, charity drives, and neighborhood partnerships.',
-    color: '#FECB00',
-    keywords: ['community events', 'local partnerships', 'charity drive', 'neighborhood', 'station events']
-  },
-  {
     id: 'seasonal-campaigns',
     icon: '📅',
     title: 'Seasonal Campaigns',
@@ -340,19 +332,12 @@ const formatMessage = (content) => {
       <div class="header-content">
         <div class="shell-logo">
           <div class="shell-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
+            <img src="/src/assets/shell_logo.png" alt="Shell Logo" class="shell-logo-img">
           </div>
           <div class="logo-text">
             <h1>Shell Energy Marketing Hub</h1>
-            <span class="tagline">Strategic Campaign Development</span>
+            <span class="tagline">Campaign Development Assistant</span>
           </div>
-        </div>
-        <div class="header-badges">
-          <div class="badge">Professional</div>
-          <div class="badge">Data-Driven</div>
-          <div class="badge">Results-Focused</div>
         </div>
       </div>
     </header>
@@ -364,9 +349,8 @@ const formatMessage = (content) => {
         <div class="welcome-content">
           <div class="welcome-header">
             <div class="shell-energy-logo">
-              <div class="energy-icon">⛽</div>
               <div>
-                <h2>Shell Station Marketing Hub</h2>
+                <h2>Shell Marketing Hub</h2>
                 <p>Connected marketing platform for Shell franchise owners to promote local offers and engage customers in their community.</p>
               </div>
             </div>
@@ -390,18 +374,7 @@ const formatMessage = (content) => {
             </button>
           </div>
 
-          <div class="methodology-section">
-            <h3>MORE! Connected Platform Benefits</h3>
-            <div class="methodology-grid">
-              <div v-for="item in methodologyItems" :key="item.title" class="method-item">
-                <div class="method-icon">{{ item.icon }}</div>
-                <div class="method-text">
-                  <strong>{{ item.title }}</strong>
-                  <span>{{ item.description }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
 
@@ -461,9 +434,6 @@ const formatMessage = (content) => {
             </svg>
           </button>
         </div>
-        <p class="input-hint">
-          Get personalized marketing strategies for your Shell station powered by MORE! Connected
-        </p>
       </div>
     </div>
   </div>
@@ -503,44 +473,24 @@ const formatMessage = (content) => {
 }
 
 .shell-icon {
-  background: linear-gradient(45deg, #D52B1E 0%, #D52B1E 50%, #FECB00 50%, #FECB00 100%);
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-}
-
-.shell-icon::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2rem;
-  height: 2rem;
-  background: #1e1e1e;
-  border-radius: 50%;
-}
-
-.shell-icon::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1.5rem;
-  height: 1.5rem;
-  background: linear-gradient(45deg, #D52B1E 0%, #D52B1E 50%, #FECB00 50%, #FECB00 100%);
-  border-radius: 50%;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 .shell-icon svg {
   display: none;
+}
+
+.shell-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 10;
 }
 
 .logo-text h1 {
